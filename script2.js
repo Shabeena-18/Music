@@ -5,7 +5,6 @@ let searchButton = document.getElementById("searchBtn");
 
 let searchValue = "";
 
-// STEP 1: Create music card
 function createMusicCard(each) {
 
     let musicItem = document.createElement("div");
@@ -43,12 +42,12 @@ function createMusicCard(each) {
 }
 
 
-// STEP 2: Display all search results
+
 function displayResults(songs) {
 
     console.log("Display results function called");
 
-    // Remove previous search results
+   
     container.replaceChildren();
 
     for (let each of songs) {
@@ -60,7 +59,6 @@ function displayResults(songs) {
 }
 
 
-// STEP 3: Fetch songs from Deezer API
 function getSongs() {
 
     let query = searchValue;
@@ -96,7 +94,7 @@ function getSongs() {
 }
 
 
-// STEP 4: Get input value and search
+
 function searchMusic() {
 
     console.log("Search function called");
@@ -112,12 +110,11 @@ function searchMusic() {
 
     getSongs();
 
-    // Clear input after searching
     inputValue.value = "";
 }
 
 
-// STEP 5: Handle Enter key
+
 function searchElement(event) {
 
     console.log("Key pressed:", event.key);
@@ -130,7 +127,7 @@ function searchElement(event) {
 }
 
 
-// STEP 6: Add event listeners
+
 
 searchButton.addEventListener("click", searchMusic);
 
