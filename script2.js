@@ -66,7 +66,7 @@ function getSongs() {
     let query = searchValue;
 
     const url = "https://proxy.cors.dev/https://api.deezer.com/search?q="
-        + encodeURIComponent(query) + "&limit=30";
+        + encodeURIComponent(query) + "&limit=50";
 
     console.log(url);
 
